@@ -2,9 +2,11 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
+from pathlib import Path
+BASE_DIR = Path(__file__).parent
 
 # Leitura da planilha
-file = "C:\\Users\\sesai\\OneDrive\\Área de Trabalho\\Rafael\\Ibmec\\Estruturada\\Pacientes.xlsx"
+file = BASE_DIR/"Pacientes.xlsx"
 df = pd.read_excel(file)
 
 
