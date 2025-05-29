@@ -96,6 +96,5 @@ import streamlit as st
 import pandas as pd
 
 st.title("dashboard de pacientes")
-file = "C:\\Users\\sesai\\OneDrive\\Área de Trabalho\\Rafael\\Ibmec\\Estruturada\\Pacientes.xlsx"
 df = pd.read_excel(file)
 st.dataframe(df)
