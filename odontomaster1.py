@@ -2,12 +2,16 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
-from pathlib import Path
-BASE_DIR = Path(__file__).parent
 
 # Leitura da planilha
-file = BASE_DIR/"Pacientes.xlsx"
+file = "C:\\Users\\sesai\\OneDrive\\Área de Trabalho\\Rafael\\Ibmec\\Estruturada\\Pacientes.xlsx"
 df = pd.read_excel(file)
+
+# Agora vou fazer o Dashboard 
+
+st.title("dashboard de pacientes")
+df = pd.read_excel(file)
+st.dataframe(df)
 
 
 # Estilo dos gráficos
@@ -90,11 +94,3 @@ plt.tight_layout()
 plt.show()
 st.pyplot(Grafico5)
 
-# Agora vou fazer o Dashboard 
-
-import streamlit as st
-import pandas as pd
-
-st.title("dashboard de pacientes")
-df = pd.read_excel(file)
-st.dataframe(df)
