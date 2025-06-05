@@ -94,3 +94,14 @@ plt.tight_layout()
 plt.show()
 st.pyplot(Grafico5)
 
+#Grafico 6 
+Grafico6 = plt.figure(figsize=(10, 6))
+sns.countplot(data=df_copy, y='Dentista Responsável', order=df_copy['Dentista Responsável'].value_counts().index, palette='viridis')
+
+# Título e rótulos
+plt.title("Número de Consultas por Dentista Responsável")
+plt.xlabel("Número de Consultas")
+plt.ylabel("Dentista Responsável")
+plt.tight_layout()
+st.pyplot(Grafico6)
+
